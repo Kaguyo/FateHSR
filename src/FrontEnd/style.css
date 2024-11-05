@@ -178,8 +178,8 @@
     #attackListContainer {
         z-index: 1;
         display: grid;
-        transition: max-height 0.9s ease, visibility 0.9s;
-        top: 242%;
+        transition: max-height 0.9s ease;
+        top: 242.1%;
         left: -3.2%;
         transform: translate(20%, 57.5%);
         position: absolute;
@@ -194,12 +194,17 @@
         visibility: visible;
     }
     #attackListContainer.fourAttacks {
-        top: 235.5%;
+        top: 242.5%;
+        z-index: 1;
+    }
+    #attackListContainer.fourAttacksActive {
+        top: 235.8%;
         z-index: 1;
     }
     #button1Atk, #button2Atk, #button3Atk, #button4Atk {
         width: 100%;
-        transition: 0.1s;
+        transition: font-size 0.1s, opacity 0.5s, visibility 0.1s;
+        opacity: 0;
         background-color: rgb(24, 24, 24);
         font-size: 0px;
         color: rgb(255, 255, 255);
@@ -207,6 +212,7 @@
     }
     #button1Atk.active, #button2Atk.active, #button3Atk.active, #button4Atk.active {
         font-size: 21px;
+        opacity: 1;
         visibility: visible;
     }
     /* Inicio Seta Branca pra Cima */
@@ -521,10 +527,6 @@
         top: 263%;
         visibility: visible;
         transition: 0.28s;
-    }
-    /* Fim Seta Azul pra Baixo  ======================== */
-    #showStatus {
-        gap: 78%;
     }
     #healthBarContainer {
         position: absolute;

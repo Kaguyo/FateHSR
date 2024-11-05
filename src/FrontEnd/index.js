@@ -186,28 +186,23 @@ const ClickAtk = characterAttacks.onclick = function () {
         collapseAttackList = 2;
         addHoverClasses();
         attackListContainer.classList.add("active");
-    } else { 
-        removeHoverClasses();
-        collapseAttackList = 1;
-        addHoverClasses();
-        attackListContainer.classList.remove("active");
-    }
-    if (collapseAttackList == 2) {
         button1Atk.classList.add("active");
         button2Atk.classList.add("active");
         button3Atk.classList.add("active");
         if (document.getElementById("button4Atk")) {
             button4Atk.classList.add("active");
-            attackListContainer.classList.remove("fourAttacks");
             attackListContainer.classList.add("fourAttacksActive");
         }
-    } else {
+    } else { 
+        removeHoverClasses();
+        collapseAttackList = 1;
+        addHoverClasses();
+        attackListContainer.classList.remove("active");
         button1Atk.classList.remove("active");
         button2Atk.classList.remove("active");
         button3Atk.classList.remove("active");
         if (document.getElementById("button4Atk")) {
             button4Atk.classList.remove("active");
-            attackListContainer.classList.add("fourAttacks");
             attackListContainer.classList.remove("fourAttacksActive");
         }
     }
@@ -221,7 +216,6 @@ enemyContainer.onclick = function () {
         defDataEnemy.classList.add("active");
         spdDataEnemy.classList.add("active");
         enemyInfo.classList.add("active");
-        console.log("adiciona");
     } else { 
         removeHoverClassesEnemy();
         collapseEnemyInfo = 1;
