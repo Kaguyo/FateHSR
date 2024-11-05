@@ -1,0 +1,4 @@
+*.json
+*.csproj
+*.user
+src/FrontEnd/src
