@@ -1,0 +1,36 @@
+[
+  {
+    "ContainingType": "BackEnd.Controllers.InimigoController",
+    "Method": "Post",
+    "RelativePath": "api/Inimigo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inimigoDto",
+        "Type": "BackEnd.InimigoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "PostInimigo"
+  },
+  {
+    "ContainingType": "BackEnd.Controllers.PersonagemController",
+    "Method": "Post",
+    "RelativePath": "api/Personagem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "personagemDto",
+        "Type": "BackEnd.PersonagemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "PostPersonagem"
+  }
+]
