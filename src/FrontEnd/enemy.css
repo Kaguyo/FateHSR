@@ -207,7 +207,7 @@
     }
     /* Fim Seta Azul pra Baixo  ======================== */
 }
-@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+@media only screen and (min-width: 851px) and (max-width: 1024px) {
     #showEnemyStatus {
         position: absolute;
         right: 3.5%;
@@ -216,9 +216,9 @@
         color: white;
     }
     #C11img, #C21img, #C31img {
-        transform: translate(-17.8%, 56.5%);
+        transform: translate(-20%, 56.5%);
         position: absolute;
-        width: 300px;
+        width: 290px;
         height: 450px;
         right: 6%;
         visibility: collapse;
@@ -408,6 +408,210 @@
     }
     #spdDataEnemy.active, #defDataEnemy.active, #atkDataEnemy.active {
         font-size: 29px;
+    }
+    /* Fim Seta Azul pra Baixo  ======================== */
+}
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    #showEnemyStatus {
+        position: absolute;
+        right: 3.5%;
+        font-family: Verdana;
+        font-size: large;
+        color: white;
+    }
+    #C11img, #C21img, #C31img {
+        transform: translate(-18.5%, 56.5%);
+        position: absolute;
+        width: 300px;
+        height: 450px;
+        right: 6%;
+        visibility: collapse;
+    }
+    #C11img.active, #C21img.active, #C31img.active {
+        visibility: visible;
+        z-index: 3;
+        opacity: 1;
+    }
+    #enemyContainer {
+        z-index: 4;
+        width: 305px;
+        visibility: collapse;
+        top: 250.5%;
+        height: 65px;
+        position: absolute;
+        right: 6%;
+        transform: translate(-17.5%, 56.5%);
+        background-color: rgb(0, 0, 0);
+        border-radius: 4px;
+        font-size: 30px;
+        align-content: center;
+        text-align: center;
+        color: white;
+        opacity: 0;
+        box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.6);
+        transition: 0.2s;
+    }
+    #enemyContainer.selected {
+        opacity: 1;
+        visibility: visible;
+    }
+    #enemyContainer.active {
+        background-color: rgb(134, 0, 0);
+        cursor: pointer;
+        box-shadow: 0 0 60px 15px rgba(255, 0, 0, 0.8);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+    #enemyInfo {
+        z-index: 1;
+        display: grid;
+        top: 268.5%;
+        right: 6%;
+        transform: translate(-18%, 44.5%);
+        position: absolute;
+        max-height: 0px;
+        width: 303px;
+        background-color: rgb(0, 0, 0);
+        visibility: collapse;
+        gap: 0;
+        transition: opacity 0.3s;
+        opacity: 0;
+    }
+    #enemyInfo.active {
+        visibility: visible;
+        max-height: 300px;
+        opacity: 1;
+    }
+    #spdDataEnemy, #defDataEnemy, #atkDataEnemy {
+        position: relative;
+        z-index: 0;
+        color: rgb(255, 255, 255);
+        background-color: rgb(24, 24, 24);
+        font-size: 0px;
+        transition: 0.15s;
+        margin: 1px;
+        padding-left: 10px;
+    }
+    #spdDataEnemy.active, #defDataEnemy.active, #atkDataEnemy.active {
+        font-size: 29px;
+        height: 37px;
+    }
+    /* Inicio Seta Branca pra Cima */
+    #upSideArrowEnemy {
+        z-index: 5;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        position: absolute;
+        right: 6%;
+        top: 249%;
+        visibility: hidden;
+        transform: translate(-305%, 57.5%);
+        font-size: 32px;
+        text-shadow: 0 0 15px rgb(255, 255, 255);
+        color: white;
+    }
+    #upSideArrowEnemy.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Fim Seta Branca pra  ======================== */
+    /* Inicio Seta Azul pra cima */
+    #upSideArrowEffectEnemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 32px;
+        right: 6%;
+        top: 245%;
+        transform: translate(-400%, 57.5%) rotate(-90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideArrowEffect1Enemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 32px;
+        right: 6%;
+        top: 241%;
+        transform: translate(-400%, 57.5%) rotate(-90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideArrowEffectEnemy.active {
+        top: 239%;
+        transition: 0.2s;
+        visibility: visible;
+    }
+    #upSideArrowEffect1Enemy.active {
+        top: 234%;
+        transition: 0.28s;
+        visibility: visible;
+    }
+    /* Fim Seta Azul pra Cima  ======================== */
+    /* Inicio Seta Branca pra Baixo */
+    #upSideDownArrowEnemy {
+        z-index: 5;
+        pointer-events: none;
+        opacity: 0;
+        visibility: collapse;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 250%;
+        font-size: 32px;
+        transition: 0.2s opacity;
+        right: 6%;
+        text-shadow: 0 0 15px rgb(255, 255, 255);
+        color: white;
+        transform: translate(-305%, 57.5%);
+    }
+    #upSideDownArrowEnemy.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    /* Fim Seta Branca pra Baixo  ======================== */
+    /* Inicio Seta Azul pra Baixo */
+    #upSideDownArrowEffectEnemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 32px;
+        right: 6%;
+        top: 252%;
+        transform: translate(-384%, 30.7%) rotate(90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideDownArrowEffect1Enemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 32px;
+        right: 6%;
+        top: 256%;
+        transform: translate(-384%, 30.7%) rotate(90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideDownArrowEffectEnemy.active {
+        top: 258%;
+        visibility: visible;
+        transition: 0.2s;
+    }
+    #upSideDownArrowEffect1Enemy.active {
+        top: 263%;
+        visibility: visible;
+        transition: 0.28s;
     }
     /* Fim Seta Azul pra Baixo  ======================== */
 }
@@ -612,6 +816,210 @@
     }
     #spdDataEnemy.active, #defDataEnemy.active, #atkDataEnemy.active {
         font-size: 29px;
+    }
+/* Fim Seta Azul pra Baixo  ======================== */
+}
+@media only screen and (min-width: 1367px) {
+    #showEnemyStatus {
+        position: absolute;
+        right: 3.5%;
+        font-family: Verdana;
+        font-size: large;
+        color: white;
+    }
+    #C11img, #C21img, #C31img {
+        transform: translate(-18.5%, 55.8%);
+        position: absolute;
+        width: 330px;
+        height: 495px;
+        right: 6%;
+        visibility: collapse;
+    }
+    #C11img.active, #C21img.active, #C31img.active {
+        visibility: visible;
+        z-index: 3;
+        opacity: 1;
+    }
+    #enemyContainer {
+        z-index: 4;
+        width: 336px;
+        visibility: collapse;
+        top: 268%;
+        height: 65px;
+        position: absolute;
+        right: 6%;
+        transform: translate(-17.3%, 54%);
+        background-color: rgb(0, 0, 0);
+        border-radius: 4px;
+        font-size: 30px;
+        align-content: center;
+        text-align: center;
+        color: white;
+        opacity: 0;
+        box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.6);
+        transition: 0.2s;
+    }
+    #enemyContainer.selected {
+        opacity: 1;
+        visibility: visible;
+    }
+    #enemyContainer.active {
+        background-color: rgb(134, 0, 0);
+        cursor: pointer;
+        box-shadow: 0 0 60px 15px rgba(255, 0, 0, 0.8);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+    }
+    /* Inicio Seta Branca pra Cima */
+    #upSideArrowEnemy {
+        z-index: 5;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        position: absolute;
+        right: 6%;
+        top: 249%;
+        visibility: hidden;
+        transform: translate(-273%, 140%);
+        font-size: 36px;
+        text-shadow: 0 0 15px rgb(255, 255, 255);
+        color: white;
+    }
+    #upSideArrowEnemy.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* Fim Seta Branca pra  ======================== */
+    /* Inicio Seta Azul pra cima */
+    #upSideArrowEffectEnemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 35px;
+        right: 6%;
+        top: 258%;
+        transform: translate(-370%, 56.5%) rotate(-90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideArrowEffect1Enemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 35px;
+        right: 6%;
+        top: 253%;
+        transform: translate(-370%, 56.5%) rotate(-90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideArrowEffectEnemy.active {
+        top: 252%;
+        transition: 0.2s;
+        visibility: visible;
+    }
+    #upSideArrowEffect1Enemy.active {
+        top: 246%;
+        transition: 0.28s;
+        visibility: visible;
+    }
+    /* Fim Seta Azul pra Cima  ======================== */
+    /* Inicio Seta Branca pra Baixo */
+    #upSideDownArrowEnemy {
+        z-index: 5;
+        pointer-events: none;
+        opacity: 0;
+        visibility: collapse;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 250%;
+        font-size: 36px;
+        transition: 0.2s opacity;
+        right: 6%;
+        text-shadow: 0 0 15px rgb(255, 255, 255);
+        color: white;
+        transform: translate(-273%, 140%);
+    }
+    #upSideDownArrowEnemy.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    /* Fim Seta Branca pra Baixo  ======================== */
+    /* Inicio Seta Azul pra Baixo */
+    #upSideDownArrowEffectEnemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 35px;
+        right: 6%;
+        top: 266%;
+        transform: translate(-355.5%, 45%) rotate(90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideDownArrowEffect1Enemy {
+        z-index: 5;
+        pointer-events: none;
+        cursor: pointer;
+        font-size: 35px;
+        right: 6%;
+        top: 272%;
+        transform: translate(-355%, 45%) rotate(90deg);
+        position: absolute;
+        color: rgb(0, 217, 255);
+        visibility: hidden;
+        text-shadow: 0 0 15px rgb(138, 237, 255);
+    }
+    #upSideDownArrowEffectEnemy.active {
+        top: 271%;
+        visibility: visible;
+        transition: 0.2s;
+    }
+    #upSideDownArrowEffect1Enemy.active {
+        top: 277%;
+        visibility: visible;
+        transition: 0.28s;
+    }
+    #enemyInfo {
+        z-index: 1;
+        display: grid;
+        top: 276.5%;
+        right: 6%;
+        transform: translate(-18.8%, 54.5%);
+        position: absolute;
+        max-height: 0px;
+        width: 328px;
+        background-color: rgb(0, 0, 0);
+        visibility: collapse;
+        gap: 0;
+        transition: opacity 0.3s;
+        opacity: 0;
+    }
+    #enemyInfo.active {
+        visibility: visible;
+        max-height: 300px;
+        opacity: 1;
+    }
+    #spdDataEnemy, #defDataEnemy, #atkDataEnemy {
+        position: relative;
+        z-index: 0;
+        color: rgb(255, 255, 255);
+        background-color: rgb(24, 24, 24);
+        font-size: 0px;
+        transition: 0.15s;
+        margin: 1px;
+        padding-left: 10px;
+    }
+    #spdDataEnemy.active, #defDataEnemy.active, #atkDataEnemy.active {
+        font-size: 29px;
+        height: 45px;
     }
     /* Fim Seta Azul pra Baixo  ======================== */
 }

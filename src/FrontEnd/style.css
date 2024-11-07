@@ -566,8 +566,8 @@
         top: 250%;
         height: 65px;
         position: absolute;
-        left: 5.2%;
-        transform: translate(20%, 56.5%);
+        left: 6%;
+        transform: translate(17.5%, 56.5%);
         background-color: rgb(0, 0, 0);
         border-radius: 4px;
         font-size: 30px;
@@ -586,12 +586,12 @@
     #attackListContainer {
         display: grid;
         transition: max-height 0.9s ease, visibility 0.9;
-        top: 264%;
-        left: 5.2%;
-        transform: translate(20%, 56.5%);
+        top: 268.5%;
+        left: 6%;
+        transform: translate(18%, 46.5%);
         position: absolute;
         max-height: 0;
-        width: 305px;
+        width: 303px;
         border-radius: 4px;
         background-color: rgb(0, 0, 0);
         visibility: collapse;
@@ -627,9 +627,9 @@
         transition: opacity 0.2s ease;
         cursor: pointer;
         position: absolute;
-        left: 1.5%;
+        left: 6%;
         top: 249%;
-        transform: translate(1100%, 56.5%);
+        transform: translate(900%, 56.5%);
         font-size: 32px;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
@@ -644,9 +644,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
-        top: 245%;
-        transform: translate(1377%, 56.5%) rotate(-90deg);
+        left: 6%;
+        top: 244%;
+        transform: translate(1127%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -657,9 +657,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
-        top: 249%;
-        transform: translate(1377%, 56.5%) rotate(-90deg);
+        left: 6%;
+        top: 238%;
+        transform: translate(1127%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -687,10 +687,10 @@
         top: 250%;
         font-size: 32px;
         transition: 0.2s opacity;
-        left: 1.5%;
+        left: 6%;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
-        transform: translate(1100%, 56.5%);
+        transform: translate(900%, 56.5%);
     }
     #upSideDownArrow.active {
         opacity: 1;
@@ -702,9 +702,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
+        left: 6%;
         top: 252%;
-        transform: translate(1390%, 30.7%) rotate(90deg);
+        transform: translate(1142%, 30.7%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -715,9 +715,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
-        top: 247%;
-        transform: translate(1390%, 30.7%) rotate(90deg);
+        left: 6%;
+        top: 258%;
+        transform: translate(1142%, 30.7%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -755,7 +755,7 @@
 /*  ============================  */
 @media only screen and (min-width: 1367px) {
     #C1img, #C2img, #C3img {
-        transform: translate(18.5%, 56%);
+        transform: translate(18.5%, 55.8%);
         position: absolute;
         width: 330px;
         height: 495px;
@@ -772,8 +772,8 @@
         top: 268%;
         height: 65px;
         position: absolute;
-        left: 5.2%;
-        transform: translate(21.5%, 54%);
+        left: 6%;
+        transform: translate(17.3%, 54%);
         background-color: rgb(0, 0, 0);
         border-radius: 4px;
         font-size: 30px;
@@ -793,8 +793,8 @@
         display: grid;
         transition: max-height 0.9s ease, visibility 0.9;
         top: 276.5%;
-        left: 5.2%;
-        transform: translate(23.3%, 56.5%);
+        left: 6%;
+        transform: translate(18.8%, 56.5%);
         position: absolute;
         max-height: 0;
         width: 328px;
@@ -807,10 +807,10 @@
         visibility: visible;
     }
     #attackListContainer.fourAttacks {
-        top: 269.5%;
+        top: 270.5%;
     }
     #attackListContainer.fourAttacksActive {
-        top: 273.8%;
+        top: 267%;
     }
     #button1Atk, #button2Atk, #button3Atk, #button4Atk {
         width: 100%;
@@ -834,9 +834,9 @@
         transition: opacity 0.2s ease;
         cursor: pointer;
         position: absolute;
-        left: 2.5%;
+        left: 6%;
         top: 249%;
-        transform: translate(1100%, 140%);
+        transform: translate(900%, 140%);
         font-size: 36px;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
@@ -851,9 +851,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 35px;
-        left: 2.5%;
+        left: 6%;
         top: 258%;
-        transform: translate(1417%, 56.5%) rotate(-90deg);
+        transform: translate(1162%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -864,21 +864,21 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 35px;
-        left: 2.5%;
+        left: 6%;
         top: 253%;
-        transform: translate(1417%, 56.5%) rotate(-90deg);
+        transform: translate(1162%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
         text-shadow: 0 0 15px rgb(138, 237, 255);
     }
     #upSideArrowEffect.active {
-        top: 253%;
+        top: 252%;
         transition: 0.2s;
         visibility: visible;
     }
     #upSideArrowEffect1.active {
-        top: 247%;
+        top: 246%;
         transition: 0.28s;
         visibility: visible;
     }
@@ -892,12 +892,12 @@
         cursor: pointer;
         position: absolute;
         top: 250%;
-        font-size: 35px;
+        font-size: 36px;
         transition: 0.2s opacity;
-        left: 2.5%;
+        left: 6%;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
-        transform: translate(1133%, 140%);
+        transform: translate(900%, 140%);
     }
     #upSideDownArrow.active {
         opacity: 1;
@@ -909,9 +909,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 35px;
-        left: 2.5%;
-        top: 265%;
-        transform: translate(1430%, 30.7%) rotate(90deg);
+        left: 6%;
+        top: 266%;
+        transform: translate(1173%, 45%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -922,21 +922,21 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 35px;
-        left: 2.5%;
-        top: 271%;
-        transform: translate(1430%, 30.7%) rotate(90deg);
+        left: 6%;
+        top: 272%;
+        transform: translate(1173%, 45%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
         text-shadow: 0 0 15px rgb(138, 237, 255);
     }
     #upSideDownArrowEffect.active {
-        top: 270%;
+        top: 271%;
         visibility: visible;
         transition: 0.2s;
     }
     #upSideDownArrowEffect1.active {
-        top: 276%;
+        top: 277%;
         visibility: visible;
         transition: 0.28s;
     }
