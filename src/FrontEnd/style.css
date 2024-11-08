@@ -65,6 +65,7 @@
     visibility: hidden; /* Invisível inicialmente */
     opacity: 0; /* Invisível com transição */
     width: 100%;
+    gap: 50%;
     display: flex;
     background-color: rgb(19, 19, 19);
     box-shadow: 0 10px 25px rgb(0, 0, 0);
@@ -140,6 +141,9 @@
 /*  Inicio media query >= 643px <= 850px  */
 /*  ===================================== */
 @media only screen and (min-width: 643px) and (max-width: 850px) {
+    #showStatus {
+        padding-left: 1%;
+    }
     #C1img, #C2img, #C3img {
         transform: translate(20%, 57.5%);
         position: absolute;
@@ -346,6 +350,9 @@
 /*  Inicio media query >= 851px <= 1024px  */
 /*  ====================================== */
 @media only screen and (min-width: 851px) and (max-width: 1024px) {
+    #showStatus {
+        padding-left: 2.5%;
+    }
     #C1img, #C2img, #C3img {
         transform: translate(20%, 56.5%);
         position: absolute;
@@ -425,9 +432,9 @@
         transition: opacity 0.2s ease;
         cursor: pointer;
         position: absolute;
-        left: 1.5%;
+        left: 6%;
         top: 249%;
-        transform: translate(1100%, 56.5%);
+        transform: translate(900%, 56.5%);
         font-size: 32px;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
@@ -442,9 +449,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
+        left: 6%;
         top: 245%;
-        transform: translate(1377%, 56.5%) rotate(-90deg);
+        transform: translate(1125%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -455,9 +462,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
+        left: 6%;
         top: 241%;
-        transform: translate(1377%, 56.5%) rotate(-90deg);
+        transform: translate(1125%, 56.5%) rotate(-90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -485,10 +492,10 @@
         top: 250%;
         font-size: 32px;
         transition: 0.2s opacity;
-        left: 1.5%;
+        left: 6%;
         text-shadow: 0 0 15px rgb(255, 255, 255);
         color: white;
-        transform: translate(1100%, 56.5%);
+        transform: translate(900%, 56.5%);
     }
     #upSideDownArrow.active {
         opacity: 1;
@@ -500,9 +507,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
+        left: 6%;
         top: 252%;
-        transform: translate(1390%, 30.7%) rotate(90deg);
+        transform: translate(1138%, 30.7%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -513,9 +520,9 @@
         pointer-events: none;
         cursor: pointer;
         font-size: 32px;
-        left: 1.5%;
+        left: 6%;
         top: 256%;
-        transform: translate(1390%, 30.7%) rotate(90deg);
+        transform: translate(1138%, 30.7%) rotate(90deg);
         position: absolute;
         color: rgb(0, 217, 255);
         visibility: hidden;
@@ -548,6 +555,9 @@
 /*  Inicio media query >= 1025px <= 1366px  */
 /*  ======================================= */
 @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    #showStatus {
+        padding-left: 3.5%;
+    }
     #C1img, #C2img, #C3img {
         transform: translate(18.5%, 56.5%);
         position: absolute;
@@ -734,9 +744,6 @@
         transition: 0.28s;
     }
     /* Fim Seta Azul pra Baixo  ======================== */
-    #showStatus {
-        gap: 78%;
-    }
     #healthBarContainer {
         position: absolute;
         left: 15.9%;
@@ -754,6 +761,9 @@
 /*  Inicio media query >= 1367px  */
 /*  ============================  */
 @media only screen and (min-width: 1367px) {
+    #showStatus {
+        padding-left: 3.5%;
+    }
     #C1img, #C2img, #C3img {
         transform: translate(18.5%, 55.8%);
         position: absolute;
@@ -941,9 +951,6 @@
         transition: 0.28s;
     }
     /* Fim Seta Azul pra Baixo  ======================== */
-    #showStatus {
-        gap: 78%;
-    }
     #healthBarContainer {
         position: absolute;
         left: 15.9%;
