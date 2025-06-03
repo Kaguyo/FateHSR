@@ -1,4 +1,4 @@
-﻿namespace BackEnd   
+﻿namespace BackEnd.DTOs
 {
     public class PersonagemDTO
     {

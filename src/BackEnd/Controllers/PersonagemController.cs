@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BackEnd.Domain.Entities;
+using BackEnd.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
 {

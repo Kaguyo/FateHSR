@@ -526,7 +526,6 @@ mySubmit.onclick = function () {
             TrackHealthEnemy(hpEnemy, hpMaxEnemy);
         });
     }
-
     if (clickPhase == 2) {
         document.querySelector('label[for="character1"]').textContent = "Gepard";
         document.querySelector('label[for="character2"]').textContent = "Bronya";

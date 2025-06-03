@@ -5,3 +5,4 @@ src/FrontEnd/src
 *bin
 *obj
 *.sln
+*vs

@@ -1,6 +1,6 @@
-﻿namespace BackEnd
+﻿namespace BackEnd.Domain.Entities
 {
-    public class Inimigo
+    public class Personagem
     {
         public static int Atk { get; set; }
         public static int HpMax { get; set; }

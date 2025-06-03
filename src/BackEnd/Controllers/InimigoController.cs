@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BackEnd.Domain.Entities;
+using BackEnd.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
 {
@@ -9,80 +11,69 @@ namespace BackEnd.Controllers
         [HttpPost(Name = "PostInimigo")]
         public IActionResult Post([FromBody] InimigoDTO inimigoDto)
         {
+            Inimigo enemy = new();
             if (inimigoDto.Name == "Gepard")
             {
-                Inimigo.Atk = 1700;
-                Inimigo.HpMax = 135000;
-                Inimigo.Hp = 135000;
-                Inimigo.Def = 900;
-                Inimigo.CritDmg = 100;
-                Inimigo.CritRate = 10;
-                Inimigo.UltCost = 75;
-                Inimigo.Energy = 0;
-                Inimigo.Speed = 90;
+                enemy.Atk = 1700;
+                enemy.HpMax = 135000;
+                enemy.Hp = 135000;
+                enemy.Def = 900;
+                enemy.CritDmg = 100;
+                enemy.CritRate = 10;
+                enemy.UltCost = 75;
+                enemy.Energy = 0;
+                enemy.Speed = 90;
             }
             else if (inimigoDto.Name == "Bronya")
             {
-                Inimigo.Atk = 1150;
-                Inimigo.HpMax = 155000;
-                Inimigo.Hp = 155000;
-                Inimigo.Def = 620;
-                Inimigo.CritDmg = 250;
-                Inimigo.CritRate = 25;
-                Inimigo.UltCost = 80;
-                Inimigo.Energy = 0;
-                Inimigo.Speed = 100;
+                enemy.Atk = 1150;
+                enemy.HpMax = 155000;
+                enemy.Hp = 155000;
+                enemy.Def = 620;
+                enemy.CritDmg = 250;
+                enemy.CritRate = 25;
+                enemy.UltCost = 80;
+                enemy.Energy = 0;
+                enemy.Speed = 100;
             }
             else if (inimigoDto.Name == "Blade")
             {
-                Inimigo.Atk = 1250;
-                Inimigo.HpMax = 255000;
-                Inimigo.Hp = 255000;
-                Inimigo.Def = 600;
-                Inimigo.CritDmg = 100;
-                Inimigo.CritRate = 30;
-                Inimigo.UltCost = 90;
-                Inimigo.Energy = 0;
-                Inimigo.Speed = 100;
+                enemy.Atk = 1250;
+                enemy.HpMax = 255000;
+                enemy.Hp = 255000;
+                enemy.Def = 600;
+                enemy.CritDmg = 100;
+                enemy.CritRate = 30;
+                enemy.UltCost = 90;
+                enemy.Energy = 0;
+                enemy.Speed = 100;
             }
             else if (inimigoDto.Name == "Archer")
             {
-                Inimigo.Atk = 1800;
-                Inimigo.HpMax = 135000;
-                Inimigo.Hp = 135000;
-                Inimigo.Def = 600;
-                Inimigo.CritDmg = 200;
-                Inimigo.CritRate = 35;
-                Inimigo.UltCost = 70;
-                Inimigo.Energy = 0;
-                Inimigo.Speed = 120;
+                enemy.Atk = 1800;
+                enemy.HpMax = 135000;
+                enemy.Hp = 135000;
+                enemy.Def = 600;
+                enemy.CritDmg = 200;
+                enemy.CritRate = 35;
+                enemy.UltCost = 70;
+                enemy.Energy = 0;
+                enemy.Speed = 120;
             }
             if (inimigoDto.Name == "")
             {
-                Inimigo.Atk = 0;
-                Inimigo.HpMax = 0;
-                Inimigo.Hp = 0;
-                Inimigo.Def = 0;
-                Inimigo.CritDmg = 0;
-                Inimigo.CritRate = 0;
-                Inimigo.UltCost = 0;
-                Inimigo.Energy = 0;
-                Inimigo.Speed = 0;
+                enemy.Atk = 0;
+                enemy.HpMax = 0;
+                enemy.Hp = 0;
+                enemy.Def = 0;
+                enemy.CritDmg = 0;
+                enemy.CritRate = 0;
+                enemy.UltCost = 0;
+                enemy.Energy = 0;
+                enemy.Speed = 0;
             }
-            var response = new
-            {
-                Inimigo.Atk,
-                Inimigo.HpMax,
-                Inimigo.Hp,
-                Inimigo.Def,
-                Inimigo.CritDmg,
-                Inimigo.CritRate,
-                Inimigo.UltCost,
-                Inimigo.Energy,
-                Inimigo.Speed
-            };
 
-            return Ok(response);
+            return Ok(enemy);
         }
     }
 }
