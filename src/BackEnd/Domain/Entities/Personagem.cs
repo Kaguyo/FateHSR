@@ -2,14 +2,14 @@
 {
     public class Personagem
     {
-        public static int Atk { get; set; }
-        public static int HpMax { get; set; }
-        public static int Hp { get; set; }
-        public static int Speed { get; set; }
-        public static int Def { get; set; }
-        public static double CritDmg { get; set; }
-        public static double CritRate { get; set; }
-        public static int UltCost { get; set; }
-        public static int Energy { get; set; }
+        public int Atk { get; set; }
+        public int HpMax { get; set; }
+        public int Hp { get; set; }
+        public int Speed { get; set; }
+        public int Def { get; set; }
+        public double CritDmg { get; set; }
+        public double CritRate { get; set; }
+        public int UltCost { get; set; }
+        public int Energy { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace BackEnd.Controllers
             {
                 enemy.Atk = 1700;
                 enemy.HpMax = 135000;
-                enemy.Hp = 135000;
+                enemy.Hp = 67500;
                 enemy.Def = 900;
                 enemy.CritDmg = 100;
                 enemy.CritRate = 10;

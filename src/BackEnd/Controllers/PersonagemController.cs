@@ -11,80 +11,69 @@ namespace BackEnd.Controllers
         [HttpPost(Name = "PostPersonagem")]
         public IActionResult Post([FromBody] PersonagemDTO personagemDto)
         {
+            Personagem personagem = new();
             if (personagemDto.Name == "Artoria")
             {
-                Personagem.Atk = 1700;
-                Personagem.HpMax = 175000;
-                Personagem.Hp = 175000;
-                Personagem.Def = 600;
-                Personagem.CritDmg = 100;
-                Personagem.CritRate = 10;
-                Personagem.UltCost = 75;
-                Personagem.Energy = 0;
-                Personagem.Speed = 100;
+                personagem.Atk = 1700;
+                personagem.HpMax = 175000;
+                personagem.Hp = 175000;
+                personagem.Def = 600;
+                personagem.CritDmg = 100;
+                personagem.CritRate = 10;
+                personagem.UltCost = 75;
+                personagem.Energy = 0;
+                personagem.Speed = 100;
             }
             else if (personagemDto.Name == "Baobhan") 
             {
-                Personagem.Atk = 1550;
-                Personagem.HpMax = 155000;
-                Personagem.Hp = 155000;
-                Personagem.Def = 620;
-                Personagem.CritDmg = 150;
-                Personagem.CritRate = 15;
-                Personagem.UltCost = 80;
-                Personagem.Energy = 0;
-                Personagem.Speed = 90;
+                personagem.Atk = 1550;
+                personagem.HpMax = 155000;
+                personagem.Hp = 155000;
+                personagem.Def = 620;
+                personagem.CritDmg = 150;
+                personagem.CritRate = 15;
+                personagem.UltCost = 80;
+                personagem.Energy = 0;
+                personagem.Speed = 90;
             }
             else if (personagemDto.Name == "Kafka")
             {
-                Personagem.Atk = 2550;
-                Personagem.HpMax = 145000;
-                Personagem.Hp = 145000;
-                Personagem.Def = 600;
-                Personagem.CritDmg = 50;
-                Personagem.CritRate = 10;
-                Personagem.UltCost = 60;
-                Personagem.Energy = 0;
-                Personagem.Speed = 100;
+                personagem.Atk = 2550;
+                personagem.HpMax = 145000;
+                personagem.Hp = 145000;
+                personagem.Def = 600;
+                personagem.CritDmg = 50;
+                personagem.CritRate = 10;
+                personagem.UltCost = 60;
+                personagem.Energy = 0;
+                personagem.Speed = 100;
             }
             else if (personagemDto.Name == "Seele")
             {
-                Personagem.Atk = 1800;
-                Personagem.HpMax = 135000;
-                Personagem.Hp = 135000;
-                Personagem.Def = 600;
-                Personagem.CritDmg = 100;
-                Personagem.CritRate = 35;
-                Personagem.UltCost = 70;
-                Personagem.Energy = 0;
-                Personagem.Speed = 120;
+                personagem.Atk = 1800;
+                personagem.HpMax = 135000;
+                personagem.Hp = 135000;
+                personagem.Def = 600;
+                personagem.CritDmg = 100;
+                personagem.CritRate = 35;
+                personagem.UltCost = 70;
+                personagem.Energy = 0;
+                personagem.Speed = 120;
             }
             if (personagemDto.Name == "") 
             {
-                Personagem.Atk = 0;
-                Personagem.HpMax = 0;
-                Personagem.Hp = 0;
-                Personagem.Def = 0;
-                Personagem.CritDmg = 0;
-                Personagem.CritRate = 0;
-                Personagem.UltCost = 0;
-                Personagem.Energy = 0;
-                Personagem.Speed = 0;
+                personagem.Atk = 0;
+                personagem.HpMax = 0;
+                personagem.Hp = 0;
+                personagem.Def = 0;
+                personagem.CritDmg = 0;
+                personagem.CritRate = 0;
+                personagem.UltCost = 0;
+                personagem.Energy = 0;
+                personagem.Speed = 0;
             }
-            var response = new
-            {
-                Personagem.Atk,
-                Personagem.HpMax,
-                Personagem.Hp,
-                Personagem.Def,
-                Personagem.CritDmg,
-                Personagem.CritRate,
-                Personagem.UltCost,
-                Personagem.Energy,
-                Personagem.Speed
-            };
 
-            return Ok(response);
+            return Ok(personagem);
         }
     }
 }
