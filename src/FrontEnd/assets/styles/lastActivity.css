@@ -1,0 +1,8 @@
+#lastActivity {
+    width: 35%;
+    height: 30%;
+    margin-left: 4px;
+    margin-top: 4px;
+    border-radius: 4px;
+    overflow: scroll;
+}
