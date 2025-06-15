@@ -24,4 +24,12 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+#topBar1 {
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 521px;
+    margin-bottom: -4px;
 }
