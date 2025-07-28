@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: #09135a;
+    box-shadow: 0 20px 40px 20px rgb(43, 67, 104);
+}
