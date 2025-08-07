@@ -18,15 +18,15 @@ class Character {
 
         if (name == "Blade") {
             baseStats.health = 69;
-            baseStats.attack = 15;
-            baseStats.defense = 14;
+            baseStats.attack = 25;
+            baseStats.defense = 24;
             baseStats.spd = 90;
             baseStats.ultCost = 140;
 
         } else if (name == "Saber") {
             baseStats.health = 45;
             baseStats.attack = 32;
-            baseStats.defense = 14;
+            baseStats.defense = 24;
             baseStats.spd = 100;
             baseStats.ultCost = 300;
         }
