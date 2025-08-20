@@ -1,12 +1,18 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace server.Application.DTOs.User;
-public class UserRequest
+namespace server.Domain.Entities;
+
+public class User
 {
     [Required]
+    public string Id { get; set; }
+
+    [Required]
     public string Username { get; set; }
+
     [Required]
     public string Email { get; set; }
+    
     [Required]
-    public string Password { get; set; }
+    public string PasswordHash { get; set; }
 }
