@@ -5,14 +5,19 @@ namespace server.Domain.Entities;
 public class User
 {
     [Required]
-    public string Id { get; set; }
+    public int Id { get; set; } = 0;
 
     [Required]
-    public string Username { get; set; }
+    public string Username { get; set; } = string.Empty;
 
     [Required]
-    public string Email { get; set; }
-    
+    public string Email { get; set; } = string.Empty;
+
     [Required]
-    public string PasswordHash { get; set; }
+    public string PasswordHash { get; set; } = string.Empty;
+
+    override public string ToString()
+    {
+        return $"Id: {Id}, Username: {Username}, Email: {Email}";
+    }
 }

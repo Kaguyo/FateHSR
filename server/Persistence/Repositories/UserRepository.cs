@@ -1,23 +1,24 @@
 using server.Domain.Entities;
 
-namespace server.Persistence.Repositories;
-
-public class UserRepository
+namespace server.Persistence.Repositories
 {
-    internal static readonly List<User> _users = new();
-
-    public Task AddUserInMemory(User user)
+    public class UserRepository : IUserRepository
     {
-        _users.Add(user);
-        foreach (User usuario in _users)
+        private static readonly List<User> _users = new();
+
+        public Task Add(User user)
         {
-            Console.WriteLine(usuario);
+            _users.Add(user);
+            foreach (User usuario in _users)
+            {
+                Console.WriteLine(usuario);
+            }
+            return Task.CompletedTask;
         }
-        return Task.CompletedTask;
-    }
 
-    public User? GetByEmailInMemory(string email)
-    {
-        return _users.FirstOrDefault(user => user.Email == email);
+        public User? GetByEmailInMemory(string email)
+        {
+            return _users.FirstOrDefault(user => user.Email == email);
+        }
     }
 }

@@ -1,6 +1,0 @@
-@FGOxSTR_Server_HostAddress = http://localhost:5288
-
-GET {{FGOxSTR_Server_HostAddress}}/
-Accept: application/json
-
-###

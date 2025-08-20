@@ -2,11 +2,11 @@ using server.Domain.Entities;
 
 namespace server.Application.UserUseCases;
 
-public class LoginUserUseCaseInMemory
+public class LoginUser
 {
     private readonly List<User> _users;
 
-    public LoginUserUseCaseInMemory(List<User> users)
+    public LoginUser(List<User> users)
     {
         _users = users;
     }

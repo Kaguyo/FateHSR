@@ -8,12 +8,12 @@ public class UserController : ControllerBase
 {
     public static void LoadControllers(WebApplication app)
     {
-        app.MapPost("/users", async (CreateUserUseCaseInMemory createUserUseCase, UserRequest userRequest) =>
+        app.MapPost("/users", (CreateUser createUserUseCase, UserRequest userRequest) =>
         {
             try
             {
-                var createdUser = await createUserUseCase.Execute(userRequest.Username, userRequest.Email, userRequest.Password);
-                return Results.Created($"/users/{createdUser.Email}", createdUser);
+                var createdUser = createUserUseCase.Execute(userRequest.Username, userRequest.Email, userRequest.Password);
+                return Results.Created($"/users", createdUser);
             }
             catch (Exception ex)
             {
@@ -22,7 +22,7 @@ public class UserController : ControllerBase
             }
         });
 
-        app.MapPost("/auth/login", async (LoginUserUseCaseInMemory loginUseCase, UserRequest userRequest) =>
+        app.MapPost("/auth/login", (LoginUser loginUseCase, UserRequest userRequest) =>
         {
             try
             {
