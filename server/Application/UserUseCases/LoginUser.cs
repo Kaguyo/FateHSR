@@ -4,16 +4,16 @@ namespace server.Application.UserUseCases;
 
 public class LoginUser
 {
-    private readonly List<User> _users;
+    private readonly IUserRepository _repository;
 
-    public LoginUser(List<User> users)
+    public LoginUser(IUserRepository repository)
     {
-        _users = users;
+        _repository = repository;
     }
 
     public User Execute(string email, string password)
     {
-        var user = _users.FirstOrDefault(u => u.Email == email && u.PasswordHash == password.GetHashCode().ToString());
+        var user = _repository.GetByEmailInMemory(email);
         return user;
     }
 }
