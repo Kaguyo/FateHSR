@@ -15,8 +15,17 @@ namespace server.Persistence.Repositories
             }
             return Task.CompletedTask;
         }
+        public Task<User> Login(string email, string password)
+        {
+            var user = GetByEmailInMemory(email);
+            if (user?.PasswordHash == password.GetHashCode().ToString())
+            {
+                return Task.FromResult(user);
+            }
 
-        public User? GetByEmailInMemory(string email)
+            throw new ArgumentException("Invalid email or password.");
+        }
+        private static User? GetByEmailInMemory(string email)
         {
             return _users.FirstOrDefault(user => user.Email == email);
         }

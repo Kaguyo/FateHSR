@@ -11,9 +11,8 @@ public class LoginUser
         _repository = repository;
     }
 
-    public User Execute(string email, string password)
+    public Task Execute(string email, string password)
     {
-        var user = _repository.GetByEmailInMemory(email);
-        return user;
+        return _repository.Login(email, password);
     }
 }

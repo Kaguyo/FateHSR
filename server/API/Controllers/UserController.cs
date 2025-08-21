@@ -12,12 +12,14 @@ public class UserController : ControllerBase
         {
             try
             {
+                UserRequestValidator.ValidateCreateUser(userRequest);
                 var createdUser = createUserUseCase.Execute(userRequest.Username, userRequest.Email, userRequest.Password);
                 return Results.Created($"/users", createdUser);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro: {ex.Message}");
+                // Console.ReadKey(true);
                 return Results.BadRequest(new { ex.Message });
             }
         });
@@ -26,6 +28,7 @@ public class UserController : ControllerBase
         {
             try
             {
+                UserRequestValidator.ValidateLoginUser(userRequest);
                 var authenticatedUser = loginUseCase.Execute(userRequest.Email, userRequest.Password);
                 if (authenticatedUser == null)
                 {
@@ -37,6 +40,7 @@ public class UserController : ControllerBase
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro: {ex.Message}");
+                // Console.ReadKey(true);
                 return Results.BadRequest(new { ex.Message });
             }
         });

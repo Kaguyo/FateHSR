@@ -1,7 +1,6 @@
 *.json
 *.csproj
 *.user
-src/FrontEnd/src
 *bin
 *obj
 *.sln
