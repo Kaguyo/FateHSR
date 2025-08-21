@@ -2,6 +2,7 @@
 using server.src.Application.DTOs.User;
 using server.src.Application.DTOs.Validators;
 using server.src.Application.UserUseCases;
+using server.src.Domain.Exceptions;
 
 namespace server.src.API.Controllers;
 
@@ -17,9 +18,10 @@ public class UserController : ControllerBase
                 var createdUser = createUserUseCase.Execute(userRequest.Username, userRequest.Email, userRequest.Password);
                 return Results.Created($"/users", createdUser);
             }
-            catch (Exception ex)
+            catch (InvalidUserRequestException ex)
             {
                 Console.WriteLine($"Erro: {ex.Message}");
+                UserRequestValidator.DisplayErrorMessage(ex.Expected, ex.Actual);
                 // Console.ReadKey(true);
                 return Results.BadRequest(new { ex.Message });
             }
@@ -38,9 +40,10 @@ public class UserController : ControllerBase
 
                 return Results.Ok(new { message = "Login bem-sucedido", user = authenticatedUser });
             }
-            catch (Exception ex)
+            catch (InvalidUserRequestException ex)
             {
                 Console.WriteLine($"Erro: {ex.Message}");
+                UserRequestValidator.DisplayErrorMessage(ex.Expected, ex.Actual);
                 // Console.ReadKey(true);
                 return Results.BadRequest(new { ex.Message });
             }

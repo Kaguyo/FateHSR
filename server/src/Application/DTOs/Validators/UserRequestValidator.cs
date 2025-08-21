@@ -1,6 +1,8 @@
 using System.Text.RegularExpressions;
 using System.Text.Json;
 using server.src.Application.DTOs.User;
+using server.src.Utilities;
+using server.src.Domain.Exceptions;
 
 namespace server.src.Application.DTOs.Validators;
 
@@ -22,7 +24,7 @@ public static class UserRequestValidator
                 Password = "NotNullOrWhiteSpace"
             };
 
-            throw new ArgumentException(BuildErrorMessage(expectedRequest, userRequest));
+            throw new InvalidUserRequestException(expectedRequest, userRequest);
         }
     }
 
@@ -38,12 +40,22 @@ public static class UserRequestValidator
                 Password = "NotNullOrWhiteSpace"
             };
 
-            throw new ArgumentException(BuildErrorMessage(expectedRequest, userRequest));
+            throw new InvalidUserRequestException(expectedRequest, userRequest);
         }
     }
 
-    private static string BuildErrorMessage(UserRequest expectedRequest, UserRequest actualRequest)
+    public static void DisplayErrorMessage(UserRequest expectedRequest, UserRequest actualRequest)
     {
-        return $"Invalid request format.\n\nExpected format:\n{JsonSerializer.Serialize(expectedRequest)}\n\nReceived format:\n{JsonSerializer.Serialize(actualRequest)}";
+        Console.WriteLine("Invalid request format.\n");
+
+        Console.WriteLine("Expected format:");
+        TerminalColor.SetOutputColor(ConsoleColor.Green);
+        Console.WriteLine(JsonSerializer.Serialize(expectedRequest, new JsonSerializerOptions { WriteIndented = true }));
+        TerminalColor.ResetOutputColor();
+
+        Console.WriteLine("\nReceived format:");
+        TerminalColor.SetOutputColor(ConsoleColor.Green);
+        Console.WriteLine(JsonSerializer.Serialize(actualRequest, new JsonSerializerOptions { WriteIndented = true }));
+        TerminalColor.ResetOutputColor();
     }
 }
