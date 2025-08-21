@@ -1,7 +1,6 @@
-using server.API.Controllers;
-using server.Domain.Entities;
-using server.Persistence.Repositories;
-using server.Application.UserUseCases;
+using server.src.API.Controllers;
+using server.src.Persistence.Repositories;
+using server.src.Application.UserUseCases;
 
 namespace server;
 

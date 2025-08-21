@@ -1,6 +1,6 @@
-using server.Domain.Entities;
+using server.src.Domain.Entities;
 
-namespace server.Persistence.Repositories
+namespace server.src.Persistence.Repositories
 {
     public class UserRepository : IUserRepository
     {

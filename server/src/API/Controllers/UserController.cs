@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using server.Application.DTOs.User;
-using server.Application.UserUseCases;
+using server.src.Application.DTOs.User;
+using server.src.Application.DTOs.Validators;
+using server.src.Application.UserUseCases;
 
-namespace server.API.Controllers;
+namespace server.src.API.Controllers;
 
 public class UserController : ControllerBase
 {

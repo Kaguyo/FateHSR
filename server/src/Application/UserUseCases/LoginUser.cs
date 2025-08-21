@@ -1,6 +1,4 @@
-using server.Domain.Entities;
-
-namespace server.Application.UserUseCases;
+namespace server.src.Application.UserUseCases;
 
 public class LoginUser
 {

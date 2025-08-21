@@ -1,4 +1,4 @@
-namespace server.Application.DTOs.User;
+namespace server.src.Application.DTOs.User;
 
 public class UserRequest
 {

@@ -1,6 +1,6 @@
-using server.Domain.Entities;
+using server.src.Domain.Entities;
 
-namespace server.Application.UserUseCases;
+namespace server.src.Application.UserUseCases;
 
 public class CreateUser
 {

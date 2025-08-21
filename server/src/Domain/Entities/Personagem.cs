@@ -1,4 +1,4 @@
-﻿namespace server.Domain.Entities;
+﻿namespace server.src.Domain.Entities;
 public class Personagem
 {
     public static int Atk { get; set; }
