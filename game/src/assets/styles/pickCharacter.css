@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: #010523;
+    box-shadow: 0 20px 40px 20px rgb(43, 67, 104);
+}
+
+#gameDisplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1280px;
+    height: 720px;
+    background-color: #000000;
+    transform: translate(-50%, -50%);
+}
+
+#pickCharacterBackground {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+#charactersBoard {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    width: 924px;
+    height: 290px;
+    clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+    padding-left: 30px;
+    padding-top: 4px;
+    transform: translateX(-50%);
+    background-color: rgba(31, 95, 21, 0.2);
+    flex-wrap: wrap;
+    
+}
+
+#charactersBoard > * {
+  flex: 0 0 calc(100% / 9);
+}
+
+.rows {
+    clip-path: polygon(1.5% 0, 100% 0, 98.5% 100%, 0 100%);
+    background-color: rgb(45, 46, 24);
+    height: 33%;
+    position: relative;
+    width: 100%;
+}
+
+.character {
+    position: relative;
+    height: 71px;
+    width: 98px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    text-align: center;
+    font-size: 16px;
+    clip-path: polygon(10px 0, 98px 0, 90px 98px, 0 98px);
+    color: white;
+}
+
+#userDisplay {
+    position: relative;
+    width: 400px;
+    height: 170px;
+}

@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+}
+body {
+    background-color: black;
+    height: 1300px;
+}
+
+#combatScreen {
+    border: solid 1px blue;
+    height: 900px;
+    max-height: 900px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1300px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#player1Card, #player2Card {
+    width: 430px;
+    height: 280px;
+    border: solid 1px white;
+}
+
+#player2Card {
+    right: 0;
+    direction: rtl;
+}
+
+#attackBtn {
+    left: 65px;
+    top: 320px;
+    bottom: 0;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgb(156, 23, 23);
+    border-radius: 100%;
+}
+
+#swapCharacterBtn {
+    left: 40px;
+    position: relative;
+    top: 300px;
+    width: 105px;
+    height: 105px;
+    border: 2px solid rgb(197, 197, 197);
+    border-radius: 100%;
+}
+
+.characterContainers {
+    border: solid 1px white;
+}
+
+.enemyContainers {
+    border: solid 1px white;
+}
+
+#activeCharacterContainer {
+    position: relative;
+    left: 90px;
+    width: 120px;
+    height: 120px;
+    top: 20px;
+    border-radius: 100%;
+}
+
+#secondCharacterContainer {
+    top: 20px;
+    position: relative;
+    left: 70px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+#thirdCharacterContainer {
+    top: 0px;
+    position: relative;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+#activeEnemyContainer {
+    position: relative;
+    right: 90px;
+    width: 120px;
+    height: 120px;
+    top: 20px;
+    border-radius: 100%;
+}
+
+#secondEnemyContainer {
+    top: 20px;
+    position: relative;
+    right: 70px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+#thirdEnemyContainer {
+    top: 0px;
+    position: relative;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+#timerContainer {
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 50px;
+    left: 50%;
+    translate: -50%;
+    width: 320px;
+    height: 140px;
+    border: 1px white solid;
+    display: flex;
+}
+
+#clock {
+    border-radius: 100%;
+    border: 1px solid white;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    margin-left: 160px;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+}
+
+#playerTurnContainer, #cpuTurnContainer {
+    margin-top: 20px;
+    width: 36%;
+    border: 1px white solid;
+}
+
+#movesetContainer {
+    margin-top: 80px;
+    margin-left: 220px;
+    min-height: 60px;
+    border: 1px solid yellow;
+    width: 400px;
+}
+
+#swapsetContainer {
+    margin-top: 40px;
+    margin-left: 200px;
+    min-height: 60px;
+    border: 1px solid rgb(0, 255, 42);
+    width: 400px;
+}
+
+.playerTurnText {
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 18px;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+}
+
+.cpuTurnText { 
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 18px;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+}
