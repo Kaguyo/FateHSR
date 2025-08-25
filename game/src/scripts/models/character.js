@@ -1,5 +1,5 @@
 class Character {
-    constructor(name, level = 1) {
+    constructor(name, level = 1, src) {
         this.name = name;
         this.level = level;
         this.health = 0;
@@ -11,6 +11,9 @@ class Character {
         this.skills = [];
         this.ultCost = 0;
         this.energy = 0;
+        this.image = new Image();
+        this.image.src = src;
+        
     }
 
     static getBaseStats(name){
@@ -34,12 +37,12 @@ class Character {
         return baseStats;
     }
     
-    static createCharacter(name, level = 1) {
+    static createCharacter(name, level = 1, src) {
         switch (name) {
             case "Blade":
-                return new Blade(level);
+                return new Blade(level, src);
             case "Saber":
-                return new Saber(level);
+                return new Saber(level, src);
             default:
                 throw new Error(`Unknown character: ${name}`);
         }

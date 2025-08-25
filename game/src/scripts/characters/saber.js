@@ -1,6 +1,6 @@
 class Saber extends Character {
-    constructor(level = 1) {
-        super("Saber", level);
+    constructor(level = 1, src) {
+        super("Saber", level, src);
         this.element = "Light";
         this.rarity = 5;
         this.path = "Saber";

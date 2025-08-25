@@ -1,6 +1,6 @@
 class Blade extends Character {
-    constructor(level = 1) {
-        super("Blade", level);
+    constructor(level = 1, src) {
+        super("Blade", level, src);
         this.element = "Wind";
         this.rarity = 5;
         this.path = "Destruction";

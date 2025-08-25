@@ -1,8 +1,20 @@
-function createRow(right) {
-    const characterElement = document.createElement('div');
-    characterElement.className = 'rows';
-    characterElement.style.right = `${right}px`;
-    charactersBoard.appendChild(characterElement);
+function createRow(right, id) {
+    const rowElement = document.createElement('div');
+    rowElement.className = 'rows';
+    rowElement.id = `${id}`;
+    rowElement.style.right = `${right}px`;
+    if (id === 1) {
+        rowElement.style.paddingLeft = '14px';
+    } else if (id === 2) {
+        rowElement.style.paddingLeft = '14px';
+    } else if (id === 3) {
+        rowElement.style.paddingLeft = '14px';
+    }
+   
+    rowElement.style.display = 'flex';
+    rowElement.style.gap = '2px';
+
+    charactersBoard.appendChild(rowElement);
 }
 
 function createUserDisplay(img) {
