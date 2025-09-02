@@ -2,7 +2,7 @@ using server.src.Domain.Entities;
 
 public interface IUserRepository
 {
-    Task Add(User user);
-    Task<User> Login(string email, string password); 
+    Task AddInMemory(User user);
+    Task<User> LoginInMemory(string email, string password); 
 }
 

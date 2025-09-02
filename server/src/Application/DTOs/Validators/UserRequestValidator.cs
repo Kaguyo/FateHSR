@@ -17,6 +17,7 @@ public static class UserRequestValidator
             string.IsNullOrWhiteSpace(userRequest.Password) ||
             !Regex.IsMatch(userRequest.Email, EmailPattern))
         {
+            Console.Clear();
             var expectedRequest = new UserRequest
             {
                 Username = "NotNullOrWhiteSpace",
@@ -54,7 +55,7 @@ public static class UserRequestValidator
         TerminalColor.ResetOutputColor();
 
         Console.WriteLine("\nReceived format:");
-        TerminalColor.SetOutputColor(ConsoleColor.Green);
+        TerminalColor.SetOutputColor(ConsoleColor.Red);
         Console.WriteLine(JsonSerializer.Serialize(actualRequest, new JsonSerializerOptions { WriteIndented = true }));
         TerminalColor.ResetOutputColor();
     }

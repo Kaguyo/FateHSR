@@ -6,7 +6,7 @@ namespace server.src.Persistence.Repositories
     {
         private static readonly List<User> _users = new();
 
-        public Task Add(User user)
+        public Task AddInMemory(User user)
         {
             _users.Add(user);
             foreach (User usuario in _users)
@@ -15,7 +15,7 @@ namespace server.src.Persistence.Repositories
             }
             return Task.CompletedTask;
         }
-        public Task<User> Login(string email, string password)
+        public Task<User> LoginInMemory(string email, string password)
         {
             var user = GetByEmailInMemory(email);
             if (user?.PasswordHash == password.GetHashCode().ToString())

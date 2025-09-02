@@ -22,7 +22,7 @@ public class CreateUser
         };
 
         Console.Clear();
-        _repository.Add(user);
+        _repository.AddInMemory(user);
         return Task.FromResult(user);
     }
 }
