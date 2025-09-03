@@ -1,11 +1,11 @@
-@Server_HostAddress = http://localhost:5024
+@Server_HostAddress = http://localhost:5000
 
 POST {{Server_HostAddress}}/users
 Content-Type: application/json
 
 {
 	"username": "Kaguyo123",
-    "email":"anything2@gmail.com",
+    "email":"anything2gmail.com",
     "password":"testAnything123"
 }
 

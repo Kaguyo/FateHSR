@@ -1,5 +1,4 @@
 *.json
-*.csproj
 *.user
 *bin
 *obj
