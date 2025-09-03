@@ -20,10 +20,17 @@ public class UserController : ControllerBase
             }
             catch (InvalidUserRequestException ex)
             {
+                Console.Clear();
                 Console.WriteLine($"Erro: {ex.Message}");
-                UserRequestValidator.DisplayErrorMessage(ex.Expected, ex.Actual);
-                // Console.ReadKey(true);
+                InvalidUserRequestException.DisplayErrorMessage(ex.Expected, ex.Actual);
+                
                 return Results.BadRequest(new { ex.Message });
+            }
+            catch (AlreadyInUseException ex)
+            {   
+                Console.Clear();
+                Console.WriteLine($"Erro: {ex.Message}");
+                return Results.Conflict(new { ex.Message });
             }
         });
 
@@ -43,8 +50,8 @@ public class UserController : ControllerBase
             catch (InvalidUserRequestException ex)
             {
                 Console.WriteLine($"Erro: {ex.Message}");
-                UserRequestValidator.DisplayErrorMessage(ex.Expected, ex.Actual);
-                // Console.ReadKey(true);
+                InvalidUserRequestException.DisplayErrorMessage(ex.Expected, ex.Actual);
+                
                 return Results.BadRequest(new { ex.Message });
             }
         });

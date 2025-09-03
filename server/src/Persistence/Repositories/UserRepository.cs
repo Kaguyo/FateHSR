@@ -25,7 +25,7 @@ namespace server.src.Persistence.Repositories
 
             throw new ArgumentException("Invalid email or password.");
         }
-        private static User? GetByEmailInMemory(string email)
+        internal static User? GetByEmailInMemory(string email)
         {
             return _users.FirstOrDefault(user => user.Email == email);
         }
