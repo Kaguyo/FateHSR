@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using server.src.Application.DTOs.User;
-using server.src.Application.DTOs.Validators;
+using server.src.API.DTOs.User;
+using server.src.API.DTOs.Validators;
 using server.src.Application.UserUseCases;
 using server.src.Domain.Exceptions;
 

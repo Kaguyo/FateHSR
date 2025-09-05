@@ -1,4 +1,4 @@
-using server.src.Application.DTOs.User;
+using server.src.API.DTOs.User;
 using server.src.Utilities;
 using System.Text.Json;
 namespace server.src.Domain.Exceptions;

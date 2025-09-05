@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
 using System.Text.Json;
-using server.src.Application.DTOs.User;
+using server.src.API.DTOs.User;
 using server.src.Utilities;
 using server.src.Domain.Exceptions;
 
-namespace server.src.Application.DTOs.Validators;
+namespace server.src.API.DTOs.Validators;
 
 public static class UserRequestValidator
 {
