@@ -10,12 +10,12 @@ public class UserController : ControllerBase
 {
     public static void LoadControllers(WebApplication app)
     {
-        app.MapPost("/users", (CreateUser createUserUseCase, UserRequest userRequest) =>
+        app.MapPost("/users", (CreateUser createUserUseCase, UserRequestDTO userRequestDTO) =>
         {
             try
             {
-                UserRequestValidator.ValidateCreateUser(userRequest);
-                var createdUser = createUserUseCase.Execute(userRequest.Username, userRequest.Email, userRequest.Password);
+                UserRequestValidator.ValidateCreateUser(userRequestDTO);
+                var createdUser = createUserUseCase.Execute(userRequestDTO.Username, userRequestDTO.Email, userRequestDTO.Password);
                 return Results.Created($"/users", createdUser);
             }
             catch (InvalidUserRequestException ex)
@@ -34,12 +34,12 @@ public class UserController : ControllerBase
             }
         });
 
-        app.MapPost("/auth/login", (LoginUser loginUseCase, UserRequest userRequest) =>
+        app.MapPost("/auth/login", (LoginUser loginUseCase, UserRequestDTO UserRequestDTO) =>
         {
             try
             {
-                UserRequestValidator.ValidateLoginUser(userRequest);
-                var authenticatedUser = loginUseCase.Execute(userRequest.Email, userRequest.Password);
+                UserRequestValidator.ValidateLoginUser(UserRequestDTO);
+                var authenticatedUser = loginUseCase.Execute(UserRequestDTO.Email, UserRequestDTO.Password);
                 if (authenticatedUser == null)
                 {
                     return Results.Json(new { message = "Credenciais invalidas. Verifique seu email e senha." }, statusCode: 401);

@@ -1,6 +1,6 @@
 namespace server.src.API.DTOs.User;
 
-public class UserRequest
+public class UserRequestDTO
 {
     public string Username { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
