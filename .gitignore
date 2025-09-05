@@ -1,7 +1,5 @@
-*.json
 *.user
 *bin
 *obj
-*.sln
 *vs
 *.png

@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {   
     "username": "Kaguyo",
-    "email":"anything2@gmail.com",
+    "email":"anything@gmail.com",
     "password":"testAnything123"
 }
 
@@ -18,6 +18,18 @@ Content-Type: application/json
 
 {   
     "username": "Kaguyo",
+    "email":"newsCoffeeJuly@gmail.com",
+    "password":"testAnything123"
+}
+
+###
+
+@Server_HostAddress = http://localhost:5024
+
+POST {{Server_HostAddress}}/auth/login
+Content-Type: application/json
+
+{   
     "email":"newsCoffeeJuly@gmail.com",
     "password":"testAnything123"
 }

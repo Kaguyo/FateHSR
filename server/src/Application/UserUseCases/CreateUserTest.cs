@@ -1,15 +1,11 @@
 using server.src.Domain.Entities;
+using server.src.Domain.Interfaces;
 
 namespace server.src.Application.UserUseCases;
 
-public class CreateUser
+public class CreateUserTest(IUserRepository repository) : ICreateUser
 {
-    private readonly IUserRepository _repository;
-
-    public CreateUser(IUserRepository repository)
-    {
-        _repository = repository;
-    }
+    private readonly IUserRepository _repository = repository;
 
     public Task<User> Execute(string username, string email, string password)
     {

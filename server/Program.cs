@@ -1,6 +1,7 @@
 using server.src.API.Controllers;
 using server.src.Persistence.Repositories;
 using server.src.Application.UserUseCases;
+using server.src.Domain.Interfaces;
 
 namespace server;
 
@@ -10,9 +11,18 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        if (builder.Environment.IsDevelopment())
+        {
+            builder.Services.AddScoped<ICreateUser, CreateUserTest>();
+            builder.Services.AddScoped<ILoginUser, LoginUserTest>();
+        }   
+        else
+        {
+            builder.Services.AddScoped<ICreateUser, CreateUserTest>(); // Replace with real implementation later
+            builder.Services.AddScoped<ILoginUser, LoginUserTest>(); // Replace with real implementation later
+        }
+            
         builder.Services.AddScoped<IUserRepository, UserRepository>();
-        builder.Services.AddScoped<CreateUser>();
-        builder.Services.AddScoped<LoginUser>();
 
         builder.Services.AddCors(options =>
         {

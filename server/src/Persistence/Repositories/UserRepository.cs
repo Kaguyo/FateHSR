@@ -1,4 +1,5 @@
 using server.src.Domain.Entities;
+using server.src.Domain.Interfaces;
 
 namespace server.src.Persistence.Repositories
 {
@@ -15,15 +16,15 @@ namespace server.src.Persistence.Repositories
             }
             return Task.CompletedTask;
         }
-        public Task<User> LoginInMemory(string email, string password)
+        public Task<User?> LoginInMemory(string email, string password)
         {
             var user = GetByEmailInMemory(email);
             if (user?.PasswordHash == password.GetHashCode().ToString())
             {
-                return Task.FromResult(user);
+                return Task.FromResult<User?>(user);
             }
-
-            throw new ArgumentException("Invalid email or password.");
+            
+            return Task.FromResult<User?>(null);
         }
         internal static User? GetByEmailInMemory(string email)
         {

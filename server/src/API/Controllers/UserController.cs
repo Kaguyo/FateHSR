@@ -10,7 +10,7 @@ public class UserController : ControllerBase
 {
     public static void LoadControllers(WebApplication app)
     {
-        app.MapPost("/users", (CreateUser createUserUseCase, UserRequestDTO userRequestDTO) =>
+        app.MapPost("/users", (ICreateUser createUserUseCase, UserRequestDTO userRequestDTO) =>
         {
             try
             {
@@ -34,12 +34,12 @@ public class UserController : ControllerBase
             }
         });
 
-        app.MapPost("/auth/login", (LoginUser loginUseCase, UserRequestDTO UserRequestDTO) =>
+        app.MapPost("/auth/login", async (ILoginUser loginUseCase, UserRequestDTO userRequestDTO) =>
         {
             try
             {
-                UserRequestValidator.ValidateLoginUser(UserRequestDTO);
-                var authenticatedUser = loginUseCase.Execute(UserRequestDTO.Email, UserRequestDTO.Password);
+                UserRequestValidator.ValidateLoginUser(userRequestDTO);
+                var authenticatedUser = await loginUseCase.Execute(userRequestDTO.Email, userRequestDTO.Password);
                 if (authenticatedUser == null)
                 {
                     return Results.Json(new { message = "Credenciais invalidas. Verifique seu email e senha." }, statusCode: 401);
@@ -48,7 +48,8 @@ public class UserController : ControllerBase
                 return Results.Ok(new { message = "Login bem-sucedido", user = authenticatedUser });
             }
             catch (InvalidUserRequestException ex)
-            {
+            {   
+                Console.Clear();
                 Console.WriteLine($"Erro: {ex.Message}");
                 InvalidUserRequestException.DisplayErrorMessage(ex.Expected, ex.Actual);
                 
