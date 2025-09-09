@@ -2,6 +2,7 @@ using server.src.API.Controllers;
 using server.src.Persistence.Repositories;
 using server.src.Application.UserUseCases;
 using server.src.Domain.Interfaces;
+using server.src.Domain.Entities;
 
 namespace server;
 
@@ -21,7 +22,7 @@ public class Program
             builder.Services.AddScoped<ICreateUser, CreateUserTest>(); // Replace with real implementation later
             builder.Services.AddScoped<ILoginUser, LoginUserTest>(); // Replace with real implementation later
         }
-            
+        var e = new EmailSettings();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
 
         builder.Services.AddCors(options =>
