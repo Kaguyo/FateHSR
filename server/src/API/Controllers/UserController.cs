@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using server.src.API.DTOs.User;
-using server.src.API.DTOs.Validators;
+using server.src.API.DTOs.Handlers;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -68,7 +68,7 @@ public class UserController : ControllerBase
             try
             {
                 Console.WriteLine($"Received request: {userRequestDTO.Email}");
-                UserRequestValidator.ValidateCreateUser(userRequestDTO);
+                UserRequestHandler.ValidateCreateUser(userRequestDTO);
                 emailService.SendEmailWithToken(userRequestDTO.Email);
                 var createdUser = createUserUseCase.Execute(userRequestDTO.Username, userRequestDTO.Email, userRequestDTO.Password);
                 return Results.Created($"/users", createdUser);
@@ -98,7 +98,7 @@ public class UserController : ControllerBase
         {
             try
             {
-                UserRequestValidator.ValidateLoginUser(userRequestDTO);
+                UserRequestHandler.ValidateLoginUser(userRequestDTO);
                 var authenticatedUser = await loginUseCase.Execute(userRequestDTO.Email, userRequestDTO.Password);
                 if (authenticatedUser == null)
                 {

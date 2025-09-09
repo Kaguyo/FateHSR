@@ -4,8 +4,8 @@ POST {{Server_HostAddress}}/users
 Content-Type: application/json
 
 {   
-    "username": "Kaguyo",
-    "email":"gabrieltroop27@gmail.com",
+    "username": "KaguyoExample",
+    "email":"aValidExistentEmail@gmail.com",
     "password":"testAnything123"
 }
 
@@ -17,7 +17,7 @@ POST {{Server_HostAddress}}/users
 Content-Type: application/json
 
 {   
-    "username": "Kaguyo",
+    "username": "KaguyoExample",
     "email":"newsCoffeeJuly@gmail.com",
     "password":"testAnything123"
 }
