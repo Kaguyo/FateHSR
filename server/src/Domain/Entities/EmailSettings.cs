@@ -36,7 +36,6 @@ public class EmailSettings
         string s = $"SmtpServer: {SmtpServer}\n" +
                    $"SmtpPort: {SmtpPort}\n" +
                    $"SmtpUser: {SmtpUser}\n" +
-                   $"SmtpPass: {SmtpPass}\n" +
                    $"FromEmail: {FromEmail}\n" +
                    $"BaseUrl: {BaseUrl}";
 

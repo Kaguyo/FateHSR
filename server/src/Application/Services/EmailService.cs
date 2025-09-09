@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using MailKit.Net.Smtp;
+using MailKit.Security;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MimeKit;
@@ -57,7 +58,8 @@ public class EmailService : IEmailService
         using var client = new SmtpClient();
 
         // For demo, connect without SSL first, change if needed
-        client.Connect(_settings.SmtpServer, _settings.SmtpPort, MailKit.Security.SecureSocketOptions.StartTls);
+        client.Connect(_settings.SmtpServer, _settings.SmtpPort, SecureSocketOptions.SslOnConnect);
+
 
         // Authenticate if needed
         client.Authenticate(_settings.SmtpUser, _settings.SmtpPass);
