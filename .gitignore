@@ -3,3 +3,5 @@
 *obj
 *vs
 *.png
+appsettings.json
+Server.http
