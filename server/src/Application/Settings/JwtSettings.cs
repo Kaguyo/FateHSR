@@ -1,4 +1,4 @@
-namespace server.src.Domain.Entities;
+namespace server.src.Application.Settings;
 
 public class JwtSettings()
 { 

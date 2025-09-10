@@ -6,7 +6,7 @@ using MailKit.Security;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MimeKit;
-using server.src.Domain.Entities;
+using server.src.Application.Settings;
 
 public class EmailService : IEmailService
 {

@@ -1,7 +1,7 @@
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.Configuration;
 
-namespace server.src.Domain.Entities;
+namespace server.src.Application.Settings;
 
 public class EmailSettings
 {
