@@ -4,9 +4,9 @@ using server.src.API.DTOs.User;
 using server.src.Utilities;
 using server.src.Domain.Exceptions;
 
-namespace server.src.API.DTOs.Handlers;
+namespace server.src.API.DTOs.User;
 
-public static class UserRequestHandler
+public class UserRequestHandler
 {
     private const string EmailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
