@@ -2,9 +2,9 @@ using server.src.API.Controllers;
 using server.src.Persistence.Repositories;
 using server.src.Application.UserUseCases;
 using server.src.Domain.Interfaces;
-using server.src.Domain.Entities;
+using server.src.Application.Settings;
 
-namespace server;
+namespace server.src;
 
 public class Program
 {
